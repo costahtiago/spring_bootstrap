@@ -35,11 +35,6 @@ public class GreetingsController {
      * @param name the name to greet
      * @return greeting text
      */
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    public String greetingText(@PathVariable String name) {
-        return "Hello " + name + "!";
-    }
     
     @RequestMapping(value = "/olamundo/{nome}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
@@ -98,7 +93,7 @@ public class GreetingsController {
     }
     
     
-    @GetMapping(value ="buscarusuerid")
+    @GetMapping(value ="buscaruserid")
     @ResponseBody
     public ResponseEntity<Usuario> buscarusuerid(@RequestParam(name="iduser") Long iduser){
     	
